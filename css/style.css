@@ -9007,8 +9007,44 @@ textarea.form-control {
     font-weight: 500;
     letter-spacing: 2px;
     border-bottom: 3px solid rgba(255, 255, 255, 0.3); }
+  
+    /* Dropdown fix with visible icon */
+.appointment-form .select-wrap {
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+}
 
-.appointment-form .form-group {
+.appointment-form .select-wrap .icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555; /* make icon visible on white background */
+  font-size: 14px;
+  z-index: 2;
+}
+
+.appointment-form select.form-control {
+  color: #000 !important;
+  background-color: #fff !important;
+  border: none;
+  width: 100%;
+  padding: 10px 35px 10px 10px; /* space for the icon */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+}
+
+/* Dropdown option styling */
+.appointment-form select.form-control option {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+/* .appointment-form .form-group {
   position: relative;
   width: 100%;
   display: block; }
@@ -9046,19 +9082,15 @@ textarea.form-control {
   -webkit-box-shadow: none !important;
   box-shadow: none !important; }
   .appointment-form .form-control::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
     color: rgba(255, 255, 255, 0.9); }
   .appointment-form .form-control::-moz-placeholder {
-    /* Firefox 19+ */
     color: rgba(255, 255, 255, 0.9); }
   .appointment-form .form-control:-ms-input-placeholder {
-    /* IE 10+ */
     color: rgba(255, 255, 255, 0.9); }
   .appointment-form .form-control:-moz-placeholder {
-    /* Firefox 18- */
     color: rgba(255, 255, 255, 0.9); }
   .appointment-form .form-control:focus, .appointment-form .form-control:active {
-    border-color: #fff; }
+    border-color: #fff; } */
 
 .appointment-form textarea.form-control {
   height: inherit !important; }
@@ -9367,7 +9399,7 @@ footer {
     position: relative; }
   .testimony-wrap .quote {
     position: absolute;
-    top: -45px;
+    top: -15px;
     left: 25px;
     opacity: 1; }
     .testimony-wrap .quote i {
